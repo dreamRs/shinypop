@@ -1,5 +1,6 @@
 
-
+#' @rdname noty
+#' @export
 #' @importFrom htmltools attachDependencies
 use_noty <- function() {
   attachDependencies(

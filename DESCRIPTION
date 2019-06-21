@@ -10,3 +10,4 @@ LazyData: true
 Imports: 
     shiny,
     htmltools
+RoxygenNote: 6.1.1

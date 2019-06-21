@@ -8,8 +8,12 @@
  * @version 0.1.0
  */
 
-
+// noty
 Shiny.addCustomMessageHandler("shinynoty-noty", function(data) {
   new Noty(data).show();
+});
+
+Shiny.addCustomMessageHandler("shinynoty-noty-close", function(data) {
+  Noty.closeAll();
 });
 
