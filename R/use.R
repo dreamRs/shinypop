@@ -7,7 +7,8 @@ use_noty <- function() {
     x = tags$div(class = "noty-deps"),
     value = list(
       noty_dependencies(),
-      shinynoty_dependencies()
+      shinynoty_dependencies(),
+      animate_dependencies()
     )
   )
 }

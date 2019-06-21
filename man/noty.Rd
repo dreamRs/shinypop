@@ -10,8 +10,8 @@ noty(text, timeout = getOption("noty.timeout", default = 1000),
   layout = c("topRight", "top", "topLeft", "topCenter", "center",
   "centerLeft", "centerRight", "bottom", "bottomLeft", "bottomCenter",
   "bottomRight"), theme = getOption("noty.theme", default = "sunset"),
-  modal = FALSE, killer = FALSE,
-  session = shiny::getDefaultReactiveDomain())
+  modal = FALSE, killer = FALSE, animation_open = NULL,
+  animation_close = NULL, session = shiny::getDefaultReactiveDomain())
 
 use_noty()
 }
@@ -33,6 +33,8 @@ Set \code{FALSE} for sticky notifications.}
 \item{modal}{Add an overlay to the page to emphasis notification.}
 
 \item{killer}{Close all others notification before openning.}
+
+\item{animation_open, animation_close}{Animation effect, use \code{\link{animation}}.}
 
 \item{session}{Shiny session.}
 }

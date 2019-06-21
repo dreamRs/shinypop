@@ -22,3 +22,16 @@ noty_dependencies <- function() {
     stylesheet = "noty/noty.min.css"
   )
 }
+
+
+#' @importFrom htmltools htmlDependency
+animate_dependencies <- function() {
+  htmlDependency(
+    name = "animate",
+    version = "3.5.2",
+    src = list(href = "shinynoty", file = "assets"),
+    package = "shinynoty",
+    stylesheet = "animate/animate.min.css"
+  )
+}
+
