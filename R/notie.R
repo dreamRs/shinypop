@@ -63,6 +63,8 @@ notie_close <- function(session = shiny::getDefaultReactiveDomain()) {
 #'
 #' @export
 #'
+#' @importFrom shiny getDefaultReactiveDomain
+#'
 #' @examples
 #' if (interactive()) {
 #'

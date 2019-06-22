@@ -4,6 +4,7 @@
 \alias{notie}
 \alias{notie_close}
 \alias{use_notie}
+\alias{use_push}
 \title{Notification with notie.js}
 \usage{
 notie(text, time = getOption("notie.time", default = 3),
@@ -14,6 +15,8 @@ notie(text, time = getOption("notie.time", default = 3),
 notie_close(session = shiny::getDefaultReactiveDomain())
 
 use_notie()
+
+use_push()
 }
 \arguments{
 \item{text}{Text to display.}

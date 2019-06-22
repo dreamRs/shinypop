@@ -47,3 +47,14 @@ notie_dependencies <- function() {
   )
 }
 
+#' @importFrom htmltools htmlDependency
+push_dependencies <- function() {
+  htmlDependency(
+    name = "push.js",
+    version = "1.0.0",
+    src = list(href = "shinypop", file = "assets"),
+    package = "shinypop",
+    script = "push/push.min.js"
+  )
+}
+
