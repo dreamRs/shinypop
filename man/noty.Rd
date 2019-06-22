@@ -21,7 +21,7 @@ use_noty()
 \arguments{
 \item{text}{Text to display.}
 
-\item{timeout}{Delay for closing event in milliseconds (ms).
+\item{timeout}{Delay for closing notification in milliseconds (ms).
 Set \code{FALSE} for sticky notifications.}
 
 \item{type}{Type of notification: \code{"alert"}, \code{"success"}, \code{"error"}, \code{"warning"}, \code{"info"}.}

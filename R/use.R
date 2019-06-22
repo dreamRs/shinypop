@@ -14,3 +14,15 @@ use_noty <- function() {
 }
 
 
+#' @rdname notie
+#' @export
+#' @importFrom htmltools tags attachDependencies
+use_notie <- function() {
+  attachDependencies(
+    x = tags$div(class = "notie-deps"),
+    value = list(
+      notie_dependencies(),
+      shinynoty_dependencies()
+    )
+  )
+}

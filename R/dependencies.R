@@ -35,3 +35,15 @@ animate_dependencies <- function() {
   )
 }
 
+#' @importFrom htmltools htmlDependency
+notie_dependencies <- function() {
+  htmlDependency(
+    name = "notie",
+    version = "4.3.1",
+    src = list(href = "shinypop", file = "assets"),
+    package = "shinypop",
+    script = "notie/notie.min.js",
+    stylesheet = "notie/notie.min.css"
+  )
+}
+

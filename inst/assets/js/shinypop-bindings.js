@@ -17,3 +17,11 @@ Shiny.addCustomMessageHandler("shinypop-noty-close", function(data) {
   Noty.closeAll();
 });
 
+// notie
+Shiny.addCustomMessageHandler("shinypop-notie", function(data) {
+  notie.alert(data);
+});
+
+Shiny.addCustomMessageHandler("shinypop-notie-close", function(data) {
+  notie.hideAlerts();
+});

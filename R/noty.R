@@ -5,7 +5,7 @@
 #'  Close all notifications with \code{noty_close}.
 #'
 #' @param text Text to display.
-#' @param timeout Delay for closing event in milliseconds (ms).
+#' @param timeout Delay for closing notification in milliseconds (ms).
 #'  Set \code{FALSE} for sticky notifications.
 #' @param type Type of notification: \code{"alert"}, \code{"success"}, \code{"error"}, \code{"warning"}, \code{"info"}.
 #' @param layout Position amongst : \code{"top"}, \code{"topLeft"}, \code{"topCenter"},
