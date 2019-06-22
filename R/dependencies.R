@@ -2,11 +2,11 @@
 #' @importFrom htmltools htmlDependency
 shinynoty_dependencies <- function() {
   htmlDependency(
-    name = "shinynoty",
+    name = "shinypop",
     version = "0.1.0",
-    src = list(href = "shinynoty", file = "assets"),
-    package = "shinynoty",
-    script = "js/shinynoty-bindings.js"
+    src = list(href = "shinypop", file = "assets"),
+    package = "shinypop",
+    script = "js/shinypop-bindings.js"
   )
 }
 
@@ -16,8 +16,8 @@ noty_dependencies <- function() {
   htmlDependency(
     name = "noty",
     version = "3.1.4",
-    src = list(href = "shinynoty", file = "assets"),
-    package = "shinynoty",
+    src = list(href = "shinypop", file = "assets"),
+    package = "shinypop",
     script = "noty/noty.min.js",
     stylesheet = "noty/noty.min.css"
   )
@@ -29,8 +29,8 @@ animate_dependencies <- function() {
   htmlDependency(
     name = "animate",
     version = "3.5.2",
-    src = list(href = "shinynoty", file = "assets"),
-    package = "shinynoty",
+    src = list(href = "shinypop", file = "assets"),
+    package = "shinypop",
     stylesheet = "animate/animate.min.css"
   )
 }

@@ -1,4 +1,4 @@
-Package: shinynoty
+Package: shinypop
 Title: Notifications for 'Shiny' Applications
 Version: 0.0.0.9000
 Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")),
@@ -7,6 +7,7 @@ Description: Custom notifications and alerts for 'Shiny' applications.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 2.10)
 Imports: 
     shiny,
     htmltools

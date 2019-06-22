@@ -2,6 +2,7 @@
 #' @title Notification with noty.js
 #'
 #' @description Initialize with \code{use_noty} in UI before using \code{noty} server-side.
+#'  Close all notifications with \code{noty_close}.
 #'
 #' @param text Text to display.
 #' @param timeout Delay for closing event in milliseconds (ms).
@@ -14,7 +15,7 @@
 #'  \code{"semanticui"}, \code{"light"}, \code{"bootstrap-v3"}, \code{"bootstrap-v4"}.
 #' @param modal Add an overlay to the page to emphasis notification.
 #' @param killer Close all others notification before openning.
-#' @param animation_open,animation_close Animation effect, use \code{\link{animation}}.
+#' @param animation_open,animation_close Animation effect, use \code{\link{animations}}.
 #' @param session Shiny session.
 #'
 #' @export
@@ -62,8 +63,8 @@ noty <- function(text,
   }
 
   session$sendCustomMessage(
-    type = "shinynoty-noty",
-    message = list(
+    type = "shinypop-noty",
+    message = dropNulls(list(
       text = text,
       timeout = timeout,
       type = type,
@@ -75,15 +76,21 @@ noty <- function(text,
         open = animation_open,
         close = animation_close
       )
-    )
+    ))
   )
+}
+
+#' @export
+#' @rdname noty
+noty_close <- function(session = shiny::getDefaultReactiveDomain()) {
+  session$sendCustomMessage("shinypop-noty-close", list())
 }
 
 
 
 #' @title Animation names
 #'
-#' @description List of all animations by categories
+#' @description List of all animations provided by 'animate.css' by categories
 #'
 #' @format A list of lists
 #' @source \url{https://github.com/daneden/animate.css/blob/master/animate-config.json}

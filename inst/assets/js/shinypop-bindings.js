@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2019 dreamRs
  *
- * shinynoty, JavaScript bindings use
+ * shinypop, JavaScript bindings use
  * custom notifications
  * https://github.com/dreamRs/shinylnoty
  *
@@ -9,11 +9,11 @@
  */
 
 // noty
-Shiny.addCustomMessageHandler("shinynoty-noty", function(data) {
+Shiny.addCustomMessageHandler("shinypop-noty", function(data) {
   new Noty(data).show();
 });
 
-Shiny.addCustomMessageHandler("shinynoty-noty-close", function(data) {
+Shiny.addCustomMessageHandler("shinypop-noty-close", function(data) {
   Noty.closeAll();
 });
 

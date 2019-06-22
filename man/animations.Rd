@@ -12,6 +12,6 @@
 animations
 }
 \description{
-List of all animations by categories
+List of all animations provided by 'animate.css' by categories
 }
 \keyword{datasets}

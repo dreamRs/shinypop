@@ -1,7 +1,7 @@
 
 #' @rdname noty
 #' @export
-#' @importFrom htmltools attachDependencies
+#' @importFrom htmltools tags attachDependencies
 use_noty <- function() {
   attachDependencies(
     x = tags$div(class = "noty-deps"),

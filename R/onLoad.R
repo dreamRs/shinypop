@@ -4,5 +4,5 @@
 #'
 #' @noRd
 .onLoad <- function(...) {
-  shiny::addResourcePath("shinynoty", system.file("assets", package = "shinynoty"))
+  shiny::addResourcePath("shinypop", system.file("assets", package = "shinypop"))
 }
