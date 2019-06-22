@@ -25,3 +25,15 @@ Shiny.addCustomMessageHandler("shinypop-notie", function(data) {
 Shiny.addCustomMessageHandler("shinypop-notie-close", function(data) {
   notie.hideAlerts();
 });
+
+Shiny.addCustomMessageHandler("shinypop-notie-confirm", function(data) {
+  Shiny.setInputValue(data.id, null);
+  data.config.cancelCallback = function () {
+     Shiny.setInputValue(data.id, false);
+  };
+  data.config.submitCallback = function () {
+     Shiny.setInputValue(data.id, true);
+  };
+  notie.confirm(data.config);
+});
+
