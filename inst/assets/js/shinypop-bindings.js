@@ -9,7 +9,7 @@
  */
 
 
-
+$(function() {
 // noty
 Shiny.addCustomMessageHandler("shinypop-noty", function(data) {
   new Noty(data).show();
@@ -48,3 +48,27 @@ Shiny.addCustomMessageHandler("shinypop-push", function(data) {
   Push.create(data.title, data.config);
 });
 
+
+
+// notiflix
+var configNotify = document.querySelectorAll('script[data-for="notiflix-notify-config"]');
+if (configNotify.length > 0) {
+  configNotify = JSON.parse(configNotify[0].innerHTML);
+} else {
+  configNotify = {};
+}
+Notiflix.Notify.Init(configNotify);
+Shiny.addCustomMessageHandler("shinypop-notiflix-notify-success", function(data) {
+  Notiflix.Notify.Success(data.text);
+});
+Shiny.addCustomMessageHandler("shinypop-notiflix-notify-error", function(data) {
+  Notiflix.Notify.Failure(data.text);
+});
+Shiny.addCustomMessageHandler("shinypop-notiflix-notify-info", function(data) {
+  Notiflix.Notify.Info(data.text);
+});
+Shiny.addCustomMessageHandler("shinypop-notiflix-notify-warning", function(data) {
+  Notiflix.Notify.Warning(data.text);
+});
+
+});

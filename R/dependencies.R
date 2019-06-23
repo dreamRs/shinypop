@@ -58,3 +58,15 @@ push_dependencies <- function() {
   )
 }
 
+#' @importFrom htmltools htmlDependency
+notiflix_dependencies <- function() {
+  htmlDependency(
+    name = "notiflix",
+    version = "1.6.0",
+    src = list(href = "shinypop", file = "assets"),
+    package = "shinypop",
+    script = "notiflix/notiflix-1.6.0.min.js",
+    stylesheet = "notiflix/notiflix-1.6.0.min.css"
+  )
+}
+
