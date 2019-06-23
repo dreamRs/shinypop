@@ -1,5 +1,5 @@
 Package: shinypop
-Title: Notifications for 'Shiny' Applications
+Title: Collection of Notifications for 'Shiny' Applications
 Version: 0.0.0.9000
 Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")),
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
@@ -7,7 +7,7 @@ Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c
   person("Nedim", "Arabacı", role = "cph", comment = "noty.js author"),
   person("Tyler", "Nickerson", role = "cph", comment = "push.js author"),
   person("Furkan", "MT", role = "cph", comment = "notiflix.js author"))
-Description: Custom notifications and alerts for 'Shiny' applications.
+Description: Custom notifications, confirm dialogs and alerts for 'Shiny' applications.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
