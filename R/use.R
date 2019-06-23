@@ -81,3 +81,69 @@ use_notiflix_notify <- function(position = c("right-top", "right-bottom", "left-
 }
 
 
+
+
+
+#' @param backgroundColor Changes the background color.
+#' @param borderRadius Changes the radius of the corners.
+#' @param backOverlay If you don't want to use a colored overlay you can change this option to \code{FALSE}.
+#' @param backOverlayColor Changes the color of the overlay. You can use HEX, RGB or RGBA.
+#' @param titleFontSize Changes the font-size of the title text.
+#' @param titleMaxLength Ignores characters of title text after the specified number.
+#' @param messageFontSize Changes the font-size of the message text.
+#' @param messageMaxLength Ignores characters of message text after the specified number.
+#' @param buttonFontSize Changes the font-size of the button text.
+#' @param buttonMaxLength Ignores characters of button text after the specified number.
+#' @param cssAnimation Notiflix uses CSS animations to show/hide the Reports.
+#'  If you don't want to use CSS animations you can set this option to \code{FALSE}.
+#' @param cssAnimationDuration Changes the CSS animations duration as milliseconds. Tip: 360 ms = 0.36 second.
+#' @param cssAnimationStyle 2 types of styles you can use: \code{"fade"} and \code{"zoom"}.
+#' @param plainText Use only plain text (no HTML tags). Default to \code{FALSE}.
+#' @param width Changes the width. You can use "px" or "\%". Default to \code{"280px"}.
+#'
+#' @rdname notiflix-report
+#' @export
+#' @importFrom htmltools tags attachDependencies
+#' @importFrom jsonlite toJSON
+use_notiflix_report <- function(backgroundColor = "#f8f8f8", borderRadius = "25px",
+                                backOverlay = TRUE, backOverlayColor = "rgba(0,0,0,0.5)",
+                                titleFontSize = "16px", titleMaxLength = 34,
+                                messageFontSize = "13px", messageMaxLength = 400,
+                                buttonFontSize = "14px", buttonMaxLength = 34,
+                                cssAnimation = TRUE, cssAnimationDuration = 360,
+                                cssAnimationStyle = c("fade", "zoom"),
+                                plainText = FALSE, width = "280px") {
+  cssAnimationStyle <- match.arg(cssAnimationStyle)
+  attachDependencies(
+    x = tags$div(
+      class = "notiflix-deps",
+      tags$script(
+        id = "notiflix-report-config",
+        type = "application/json",
+        `data-for` = "notiflix-report-config",
+        toJSON(dropNulls(list(
+          backgroundColor = backgroundColor,
+          borderRadius = borderRadius,
+          backOverlay = backOverlay,
+          backOverlayColor = backOverlayColor,
+          titleFontSize = titleFontSize,
+          titleMaxLength = titleMaxLength,
+          messageFontSize = messageFontSize,
+          messageMaxLength = messageMaxLength,
+          buttonFontSize = buttonFontSize,
+          buttonMaxLength = buttonMaxLength,
+          cssAnimation = cssAnimation,
+          cssAnimationDuration = cssAnimationDuration,
+          cssAnimationStyle = cssAnimationStyle,
+          plainText = plainText,
+          width = width
+        )), auto_unbox = TRUE, json_verbatim = TRUE)
+      )
+    ),
+    value = list(
+      notiflix_dependencies(),
+      shinynoty_dependencies()
+    )
+  )
+}
+

@@ -41,14 +41,43 @@ button will not disappear until they are clicked.)}
 }
 \description{
 Initialize with \code{use_notiflix_notify} in UI before using \code{nx_notify_*} server-side.
- Close all notifications with \code{notie_close}.
 }
 \note{
 Configuration of notification is done with \code{use_notiflix_notify} in UI per application.
 }
 \examples{
 if (interactive()) {
+  library(shiny)
 
+  ui <- fluidPage(
+    tags$h2("Notification with notiflix.jx"),
+    use_notiflix_notify(position = "right-bottom"),
+    actionButton("success", "Show success", class = "btn-success"),
+    actionButton("error", "Show error", class = "btn-danger"),
+    actionButton("info", "Show info", class = "btn-info"),
+    actionButton("warning", "Show warning", class = "btn-warning")
+  )
 
+  server <- function(input, output, session) {
+
+    observeEvent(input$success, {
+      nx_notify_success("Yes :)")
+    })
+
+    observeEvent(input$error, {
+      nx_notify_error("Oups...")
+    })
+
+    observeEvent(input$info, {
+      nx_notify_info("For information")
+    })
+
+    observeEvent(input$warning, {
+      nx_notify_warning("Careful !!!")
+    })
+
+  }
+
+  shinyApp(ui, server)
 }
 }
