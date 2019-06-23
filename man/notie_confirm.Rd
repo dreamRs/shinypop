@@ -23,7 +23,7 @@ notie_confirm(inputId, text, label_submit = "Ok",
 }
 \description{
 Initialize with \code{use_notie} in UI before using \code{notie_confirm} server-side.
- Retrieve value servr-side with \code{input$<inputId>}.
+ Retrieve value server-side with \code{input$<inputId>}.
 }
 \examples{
 if (interactive()) {

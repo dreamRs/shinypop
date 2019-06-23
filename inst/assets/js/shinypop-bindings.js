@@ -95,4 +95,25 @@ $(function() {
   });
 
 
+  var configConfirm = document.querySelectorAll('script[data-for="notiflix-confirm-config"]');
+  if (configConfirm.length > 0) {
+    configConfirm = JSON.parse(configConfirm[0].innerHTML);
+  } else {
+    configConfirm = {};
+  }
+  Notiflix.Confirm.Init(configConfirm);
+  Shiny.addCustomMessageHandler("shinypop-notiflix-confirm", function(data) {
+    Shiny.setInputValue(data.id, null);
+    Notiflix.Confirm.Show(
+      data.title,
+      data.message,
+      data.button_ok,
+      data.button_cancel,
+      function() {
+        Shiny.setInputValue(data.id, true);
+      }
+    );
+  });
+
+
 });

@@ -90,7 +90,7 @@ notie_close <- function(session = shiny::getDefaultReactiveDomain()) {
 #' @title Confirmation pop-up with notie.js
 #'
 #' @description Initialize with \code{use_notie} in UI before using \code{notie_confirm} server-side.
-#'  Retrieve value servr-side with \code{input$<inputId>}.
+#'  Retrieve value server-side with \code{input$<inputId>}.
 #'
 #' @param inputId The \code{input} slot that will be used to access the value.
 #' @param text Text to display.
