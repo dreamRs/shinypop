@@ -50,7 +50,7 @@ if (interactive()) {
   library(shiny)
 
   ui <- fluidPage(
-    tags$h2("Notification with notiflix.jx"),
+    tags$h2("Notification with notiflix.js"),
     use_notiflix_notify(position = "right-bottom"),
     actionButton("success", "Show success", class = "btn-success"),
     actionButton("error", "Show error", class = "btn-danger"),
