@@ -1,6 +1,7 @@
 # shinypop
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Travis build status](https://travis-ci.org/dreamRs/shinypop.svg?branch=master)](https://travis-ci.org/dreamRs/shinypop)
 
 > Collection of notifications and dialogs for Shiny applications
 
