@@ -6,7 +6,7 @@
 \alias{use_noty}
 \title{Notification with noty.js}
 \usage{
-noty(text, timeout = getOption("noty.timeout", default = 1000),
+noty(text, timeout = getOption("noty.timeout", default = 2000),
   type = c("info", "alert", "success", "error", "warning"),
   layout = c("topRight", "top", "topLeft", "topCenter", "center",
   "centerLeft", "centerRight", "bottom", "bottomLeft", "bottomCenter",
@@ -16,7 +16,7 @@ noty(text, timeout = getOption("noty.timeout", default = 1000),
 
 noty_close(session = shiny::getDefaultReactiveDomain())
 
-use_noty()
+use_noty(maxVisible = 5)
 }
 \arguments{
 \item{text}{Text to display.}
@@ -40,6 +40,8 @@ Set \code{FALSE} for sticky notifications.}
 \item{animation_open, animation_close}{Animation effect, use \code{\link{animations}}.}
 
 \item{session}{Shiny session.}
+
+\item{maxVisible}{Maximum number of notifications that can appear at a time.}
 }
 \description{
 Initialize with \code{use_noty} in UI before using \code{noty} server-side.

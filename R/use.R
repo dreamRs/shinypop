@@ -1,10 +1,21 @@
 
+#' @param maxVisible Maximum number of notifications that can appear at a time.
 #' @rdname noty
 #' @export
 #' @importFrom htmltools tags attachDependencies
-use_noty <- function() {
+use_noty <- function(maxVisible = 5) {
   attachDependencies(
-    x = tags$div(class = "noty-deps"),
+    x = tags$div(
+      class = "noty-deps",
+      tags$script(
+        id = "noty-config",
+        type = "application/json",
+        `data-for` = "noty-config",
+        toJSON(dropNulls(list(
+          maxVisible = maxVisible
+        )), auto_unbox = TRUE, json_verbatim = TRUE)
+      )
+    ),
     value = list(
       noty_dependencies(),
       shinynoty_dependencies(),

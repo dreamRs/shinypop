@@ -98,7 +98,7 @@
 #'
 #' }
 noty <- function(text,
-                 timeout = getOption("noty.timeout", default = 1000),
+                 timeout = getOption("noty.timeout", default = 2000),
                  type = c("info", "alert", "success", "error", "warning"),
                  layout = c("topRight", "top", "topLeft", "topCenter",
                             "center", "centerLeft", "centerRight",
