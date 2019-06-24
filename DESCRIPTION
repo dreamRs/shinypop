@@ -1,6 +1,6 @@
 Package: shinypop
 Title: Collection of Notifications for 'Shiny' Applications
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")),
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Jared", "Reich", role = "cph", comment = "notie.js author"),
