@@ -195,6 +195,41 @@ shinyApp(ui, server)
 ![](man/figures/notie-confirm.png)
 
 
+### notiflix
+
+Ask user confirmation : 
+
+
+```r
+ui <- fluidPage(
+  use_notiflix_confirm(),
+  tags$h2("notiflix confirmation pop-up"),
+  actionButton("show", "Ask for confirmation"),
+  verbatimTextOutput("result")
+)
+
+server <- function(input, output, session) {
+  
+  observeEvent(input$show, {
+    nx_confirm(
+      inputId = "confirm",
+      title = "Do you want to confirm?",
+      button_ok = "Sure!",
+      button_cancel = "Nope!"
+    )
+  })
+  
+  output$result <- renderPrint({
+    input$confirm
+  })
+}
+
+shinyApp(ui, server)
+```
+
+
+![](man/figures/notiflix-confirm.png)
+
 
 ## Alerts
 
@@ -226,4 +261,20 @@ shinyApp(ui, server)
 ```
 
 ![](man/figures/notiflix-report.png)
+
+
+
+
+## Related packages
+
+Those packages include similar functionnalities :
+
+ * [`shinyalert`](https://github.com/daattali/shinyalert) allow to use [sweetalert](https://github.com/t4t5/sweetalert)
+ * [`shinyWidgets`](https://github.com/dreamRs/shinyWidgets) allow to use [sweetalert2](https://github.com/sweetalert2/sweetalert2)
+ * [`shinytoastr`](https://github.com/MangoTheCat/shinytoastr) allow to use [toastr](https://github.com/CodeSeven/toastr)
+
+
+
+
+
 
