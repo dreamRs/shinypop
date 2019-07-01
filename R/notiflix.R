@@ -278,7 +278,7 @@ nx_confirm <- function(inputId, title,
   session$sendCustomMessage(
     type = "shinypop-notiflix-confirm",
     message = list(
-      id = inputId,
+      id = session$ns(inputId),
       title = title,
       message = message,
       button_ok = button_ok,

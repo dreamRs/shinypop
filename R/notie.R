@@ -141,7 +141,7 @@ notie_confirm <- function(inputId, text, label_submit = "Ok", label_cancel = "Ca
   session$sendCustomMessage(
     type = "shinypop-notie-confirm",
     message = list(
-      id = inputId,
+      id = session$ns(inputId),
       config = dropNulls(list(
         text = text,
         position = position,
