@@ -125,5 +125,12 @@ $(function() {
     });
 
   }
+  
+  
+  // favico
+  Shiny.addCustomMessageHandler("shinypop-favico", function(data) {
+    var favicon = new Favico(data.config);
+    favicon.badge(data.value);
+  });
 
 });

@@ -70,3 +70,14 @@ notiflix_dependencies <- function() {
   )
 }
 
+#' @importFrom htmltools htmlDependency
+favico_dependencies <- function() {
+  htmlDependency(
+    name = "favico.js",
+    version = "0.3.10",
+    src = list(href = "shinypop", file = "assets"),
+    package = "shinypop",
+    script = "favico/favico-0.3.10.min.js"
+  )
+}
+

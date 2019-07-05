@@ -233,3 +233,30 @@ use_notiflix_confirm <- function(backgroundColor = "#f8f8f8", borderRadius = "25
 }
 
 
+
+
+
+#' @param img Path to an image (file should be located in www folder).
+#'  Default is to used Shiny logo.
+#' 
+#' @rdname favico
+#' @export
+#' @importFrom htmltools tags attachDependencies singleton
+use_favico <- function(img = NULL) {
+  if (is.null(img))
+    img <- "shinypop/icon/shiny.png"
+  attachDependencies(
+    x = tags$div(
+      class = "favico-deps",
+      singleton(tags$head(
+        tags$link(rel = "shortcut icon", type = "image/png", href = img)
+      ))
+    ),
+    value = list(
+      favico_dependencies(),
+      shinynoty_dependencies()
+    )
+  )
+}
+
+
