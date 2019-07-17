@@ -237,50 +237,50 @@ nx_report <- function(session, type, ...) {
 #'
 #' @examples
 #' if (interactive()) {
-#'
 #'   library(shiny)
-#'
+#'   
 #'   ui <- fluidPage(
 #'     use_notiflix_confirm(),
 #'     tags$h2("notiflix confirmation pop-up"),
 #'     actionButton("show", "Ask for confirmation"),
 #'     verbatimTextOutput("result")
 #'   )
-#'
+#'   
 #'   server <- function(input, output, session) {
-#'
+#'     
 #'     observeEvent(input$show, {
 #'       nx_confirm(
 #'         inputId = "confirm",
 #'         title = "Do you want to confirm?",
+#'         message = tags$div(
+#'           tags$b("This is very important !"),
+#'           "You must click one button below !"
+#'         ),
 #'         button_ok = "Sure!",
 #'         button_cancel = "Nope!"
 #'       )
 #'     })
-#'
+#'     
 #'     output$result <- renderPrint({
 #'       input$confirm
 #'     })
 #'   }
-#'
+#'   
 #'   shinyApp(ui, server)
-#'
 #' }
 nx_confirm <- function(inputId, title,
                        message = NULL,
                        button_ok = "Ok",
                        button_cancel = "Cancel",
                        session = shiny::getDefaultReactiveDomain()) {
-  if (is.null(message))
-    message <- " "
-  if (nchar(message) == 0)
+  if (is.null(message)) 
     message <- " "
   session$sendCustomMessage(
     type = "shinypop-notiflix-confirm",
     message = list(
       id = session$ns(inputId),
       title = title,
-      message = message,
+      message = doRenderTags(message),
       button_ok = button_ok,
       button_cancel = button_cancel
     )

@@ -82,33 +82,35 @@ Configuration is done with \code{use_notiflix_report} in UI per application.
 }
 \examples{
 if (interactive()) {
-
   library(shiny)
-
+  
   ui <- fluidPage(
     use_notiflix_confirm(),
     tags$h2("notiflix confirmation pop-up"),
     actionButton("show", "Ask for confirmation"),
     verbatimTextOutput("result")
   )
-
+  
   server <- function(input, output, session) {
-
+    
     observeEvent(input$show, {
       nx_confirm(
         inputId = "confirm",
         title = "Do you want to confirm?",
+        message = tags$div(
+          tags$b("This is very important !"),
+          "You must click one button below !"
+        ),
         button_ok = "Sure!",
         button_cancel = "Nope!"
       )
     })
-
+    
     output$result <- renderPrint({
       input$confirm
     })
   }
-
+  
   shinyApp(ui, server)
-
 }
 }

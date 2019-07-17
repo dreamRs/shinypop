@@ -75,6 +75,10 @@ vex <- function(content,
 #' @rdname vex
 #'
 #' @examples
+#' 
+#' 
+#' ### Confirm ####' 
+#' 
 #' if (interactive()) {
 #'   library(shiny)
 #' 

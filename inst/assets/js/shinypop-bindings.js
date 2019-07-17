@@ -120,6 +120,9 @@ $(function() {
         data.button_cancel,
         function() {
           Shiny.setInputValue(data.id, true);
+        },
+        function() {
+          Shiny.setInputValue(data.id, false);
         }
       );
     });
