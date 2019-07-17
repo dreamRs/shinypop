@@ -4,7 +4,7 @@ Version: 0.0.1.910
 Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")),
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Jared", "Reich", role = "cph", comment = "notie.js author"),
-  person("Nedim", "Arabacı", role = "cph", comment = "noty.js author"),
+  person("Nedim", "Arabaci", role = "cph", comment = "noty.js author"),
   person("Tyler", "Nickerson", role = "cph", comment = "push.js author"),
   person("Furkan", "MT", role = "cph", comment = "notiflix.js author"),
   person("Miroslav", "Magda", role = "cph", comment = "favico.js author"))
@@ -20,3 +20,5 @@ Imports:
     htmltools,
     jsonlite
 RoxygenNote: 6.1.1
+Suggests: 
+    testthat (>= 2.1.0)
