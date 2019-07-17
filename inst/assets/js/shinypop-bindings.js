@@ -132,5 +132,21 @@ $(function() {
     var favicon = new Favico(data.config);
     favicon.badge(data.value);
   });
+  
+  
+  
+  // vex
+  var configVex = document.querySelectorAll('script[data-for="vex-config"]');
+  if (configVex.length > 0) {
+    configVex = JSON.parse(configVex[0].innerHTML);
+    if (configVex.hasOwnProperty('theme')) {
+      vex.defaultOptions.className = 'vex-theme-' + configVex.theme;
+    }
+  }
+  Shiny.addCustomMessageHandler("shinypop-vex-alert", function(data) {
+    console.log("yep");
+    vex.dialog.alert(data);
+  });
+
 
 });

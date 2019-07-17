@@ -1,6 +1,6 @@
 
 #' @importFrom htmltools htmlDependency
-shinynoty_dependencies <- function() {
+shinypop_dependencies <- function() {
   htmlDependency(
     name = "shinypop",
     version = "0.1.0",
@@ -80,4 +80,20 @@ favico_dependencies <- function() {
     script = "favico/favico-0.3.10.min.js"
   )
 }
+
+#' @importFrom htmltools htmlDependency
+vex_dependencies <- function(theme) {
+  htmlDependency(
+    name = "vex",
+    version = "4.1.0",
+    src = list(href = "shinypop", file = "assets"),
+    package = "shinypop",
+    script = "vex/js/vex.combined.min.js",
+    stylesheet = c(
+      "vex/css/vex.css",
+      sprintf("vex/css/vex-theme-%s.css", theme)
+    )
+  )
+}
+
 

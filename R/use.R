@@ -18,7 +18,7 @@ use_noty <- function(maxVisible = 5) {
     ),
     value = list(
       noty_dependencies(),
-      shinynoty_dependencies(),
+      shinypop_dependencies(),
       animate_dependencies()
     )
   )
@@ -33,7 +33,7 @@ use_notie <- function() {
     x = tags$div(class = "notie-deps"),
     value = list(
       notie_dependencies(),
-      shinynoty_dependencies()
+      shinypop_dependencies()
     )
   )
 }
@@ -46,7 +46,7 @@ use_push <- function() {
     x = tags$div(class = "push-deps"),
     value = list(
       push_dependencies(),
-      shinynoty_dependencies()
+      shinypop_dependencies()
     )
   )
 }
@@ -86,7 +86,7 @@ use_notiflix_notify <- function(position = c("right-top", "right-bottom", "left-
     ),
     value = list(
       notiflix_dependencies(),
-      shinynoty_dependencies()
+      shinypop_dependencies()
     )
   )
 }
@@ -153,7 +153,7 @@ use_notiflix_report <- function(backgroundColor = "#f8f8f8", borderRadius = "25p
     ),
     value = list(
       notiflix_dependencies(),
-      shinynoty_dependencies()
+      shinypop_dependencies()
     )
   )
 }
@@ -227,7 +227,7 @@ use_notiflix_confirm <- function(backgroundColor = "#f8f8f8", borderRadius = "25
     ),
     value = list(
       notiflix_dependencies(),
-      shinynoty_dependencies()
+      shinypop_dependencies()
     )
   )
 }
@@ -254,9 +254,48 @@ use_favico <- function(img = NULL) {
     ),
     value = list(
       favico_dependencies(),
-      shinynoty_dependencies()
+      shinypop_dependencies()
     )
   )
 }
+
+
+
+#' @param theme Theme to use. Choose between \code{"default"}, \code{"os"},
+#'  \code{"plain"}, \code{"top"}, \code{"wireframe"}, 
+#'  \code{"bottom-right-corner"}, \code{"flat-attack"}
+#' 
+#' @rdname vex
+#' @export
+#' @importFrom htmltools tags attachDependencies
+use_vex <- function(theme = c("default", "os", "plain", "top",
+                              "wireframe", "bottom-right-corner", 
+                              "flat-attack")) {
+  theme <- match.arg(theme)
+  attachDependencies(
+    x = tags$div(
+      class = "vex-deps",
+      tags$script(
+        id = "vex-config",
+        type = "application/json",
+        `data-for` = "vex-config",
+        toJSON(
+          x = dropNulls(list(
+            theme = theme
+          )), 
+          auto_unbox = TRUE, 
+          json_verbatim = TRUE
+        )
+      )
+    ),
+    value = list(
+      vex_dependencies(theme),
+      shinypop_dependencies()
+    )
+  )
+}
+
+
+
 
 
