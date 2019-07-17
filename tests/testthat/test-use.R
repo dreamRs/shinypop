@@ -67,3 +67,11 @@ test_that("use_favico works", {
   expect_true("shinypop" %in% get_name(deps))
 })
 
+test_that("use_vex works", {
+  
+  deps <- htmltools::findDependencies(use_vex())
+  
+  expect_true(length(deps) > 0)
+  expect_true("shinypop" %in% get_name(deps))
+})
+

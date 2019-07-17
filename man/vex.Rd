@@ -3,13 +3,19 @@
 \name{use_vex}
 \alias{use_vex}
 \alias{vex}
-\title{Alert with vex.js}
+\alias{vex_confirm}
+\title{Alert and confirm with vex.js}
 \usage{
 use_vex(theme = c("default", "os", "plain", "top", "wireframe",
   "bottom-right-corner", "flat-attack"))
 
 vex(content, showCloseButton = TRUE, escapeButtonCloses = TRUE,
   overlayClosesOnClick = TRUE,
+  session = shiny::getDefaultReactiveDomain())
+
+vex_confirm(inputId, content, yes_text = "Ok", no_text = "Cancel",
+  showCloseButton = FALSE, escapeButtonCloses = FALSE,
+  overlayClosesOnClick = FALSE,
   session = shiny::getDefaultReactiveDomain())
 }
 \arguments{
@@ -26,9 +32,15 @@ vex(content, showCloseButton = TRUE, escapeButtonCloses = TRUE,
 \item{overlayClosesOnClick}{Close alert when clicking outside alert.}
 
 \item{session}{Shiny session.}
+
+\item{inputId}{The \code{input} slot that will be used to access the value.}
+
+\item{yes_text}{Text to display on 'yes' button.}
+
+\item{no_text}{Text to display on 'no' button.}
 }
 \description{
-Alert with vex.js
+Alert and confirm with vex.js
 }
 \examples{
 
@@ -57,6 +69,38 @@ if (interactive()) {
     
   }
   
+  shinyApp(ui, server)
+}
+if (interactive()) {
+  library(shiny)
+
+  ui <- fluidPage(
+    tags$h2("Confirm with vex example"),
+    use_vex(theme = "flat-attack"),
+    actionButton("ask", "Ask confirmation"),
+    verbatimTextOutput(outputId = "result")
+  )
+
+  server <- function(input, output, session) {
+
+    observeEvent(input$ask, {
+      vex_confirm(
+        inputId = "confirm", 
+        content = tags$div(
+          style = "text-align: center;",
+          "Are your sure?"
+        ), 
+        yes_text = "Yep! I'm sure", 
+        no_text = "Nope, cancel!"
+      )
+    })
+    
+    output$result <- renderPrint({
+      input$confirm
+    })
+
+  }
+
   shinyApp(ui, server)
 }
 }

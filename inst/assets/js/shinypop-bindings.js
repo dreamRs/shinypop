@@ -144,8 +144,21 @@ $(function() {
     }
   }
   Shiny.addCustomMessageHandler("shinypop-vex-alert", function(data) {
-    console.log("yep");
     vex.dialog.alert(data);
+  });
+  
+  Shiny.addCustomMessageHandler("shinypop-vex-confirm", function(data) {
+    Shiny.setInputValue(data.inputId, null);
+    vex.dialog.buttons.YES.text = data.yes_text;
+    vex.dialog.buttons.NO.text = data.no_text;
+    data.config.callback = function(value) {
+      if (value) {
+        Shiny.setInputValue(data.inputId, true);
+      } else {
+        Shiny.setInputValue(data.inputId, false);
+      }
+    };
+    vex.dialog.confirm(data.config);
   });
 
 
