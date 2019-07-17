@@ -5,7 +5,7 @@
 #'  Close all notifications with \code{push_close}.
 #'
 #' @param title Title of the notification.
-#' @param text Optionnal text of the notification
+#' @param text Optional text for the notification.
 #' @param timeout Time in milliseconds until the notification closes automatically.
 #' @param session Shiny session.
 #'

@@ -26,7 +26,7 @@ Set \code{FALSE} for sticky notifications.}
 
 \item{type}{Type of notification: \code{"alert"}, \code{"success"}, \code{"error"}, \code{"warning"}, \code{"info"}.}
 
-\item{layout}{Position amongst : \code{"top"}, \code{"topLeft"}, \code{"topCenter"},
+\item{layout}{Position among : \code{"top"}, \code{"topLeft"}, \code{"topCenter"},
 \code{"topRight"}, \code{"center"}, \code{"centerLeft"}, \code{"centerRight"},
 \code{"bottom"}, \code{"bottomLeft"}, \code{"bottomCenter"}, "\code{"bottomRight"}.}
 
@@ -35,7 +35,7 @@ Set \code{FALSE} for sticky notifications.}
 
 \item{modal}{Add an overlay to the page to emphasis notification.}
 
-\item{killer}{Close all others notification before openning.}
+\item{killer}{Close all others notification before opening.}
 
 \item{animation_open, animation_close}{Animation effect, use \code{\link{animations}}.}
 

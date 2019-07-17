@@ -10,7 +10,7 @@ push(title, text = NULL, timeout = 4000,
 \arguments{
 \item{title}{Title of the notification.}
 
-\item{text}{Optionnal text of the notification}
+\item{text}{Optional text for the notification.}
 
 \item{timeout}{Time in milliseconds until the notification closes automatically.}
 

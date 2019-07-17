@@ -40,7 +40,9 @@ vex_confirm(inputId, content, yes_text = "Ok", no_text = "Cancel",
 \item{no_text}{Text to display on 'no' button.}
 }
 \description{
-Alert and confirm with vex.js
+Initialize with \code{use_vex} in UI before
+ using \code{vex} (alert) or \code{vex_confirm} (confirmation dialog) server-side.
+ Retrieve value server-side with \code{input$<inputId>} for \code{vex_confirm}.
 }
 \examples{
 

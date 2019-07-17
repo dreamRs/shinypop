@@ -24,7 +24,7 @@ Notifications libraries included :
 
 ### noty
 
-Notfications with various themes and options to configure :
+Notifications with various themes and options to configure :
 
 ```r
 ui <- fluidPage(
@@ -54,7 +54,7 @@ shinyApp(ui, server)
 
 ### notie
 
-Top or bottom fuul width notifications :
+Top or bottom full width notifications :
 
 ```r
 ui <- fluidPage(

@@ -1,5 +1,9 @@
 
-#' Alert and confirm with vex.js
+#' @title Alert and confirm with vex.js
+#' 
+#' @description Initialize with \code{use_vex} in UI before
+#'  using \code{vex} (alert) or \code{vex_confirm} (confirmation dialog) server-side.
+#'  Retrieve value server-side with \code{input$<inputId>} for \code{vex_confirm}.
 #'
 #' @param content Text to display in the alert.
 #' @param showCloseButton Show or not a button to close alert.
