@@ -164,6 +164,7 @@ use_notiflix_report <- function(backgroundColor = "#f8f8f8", borderRadius = "25p
 #' @param backOverlay If you don't want to use a colored overlay you can change this option to \code{FALSE}.
 #' @param backOverlayColor Changes the color of the overlay. You can use HEX, RGB or RGBA.
 #' @param titleFontSize Changes the font-size of the title text.
+#' @param titleColor Changes the color of the title text.
 #' @param titleMaxLength Ignores characters of title text after the specified number.
 #' @param messageFontSize Changes the font-size of the message text.
 #' @param messageMaxLength Ignores characters of message text after the specified number.
@@ -186,12 +187,13 @@ use_notiflix_report <- function(backgroundColor = "#f8f8f8", borderRadius = "25p
 #' @importFrom jsonlite toJSON
 use_notiflix_confirm <- function(backgroundColor = "#f8f8f8", borderRadius = "25px",
                                 backOverlay = TRUE, backOverlayColor = "rgba(0,0,0,0.5)",
-                                titleFontSize = "16px", titleMaxLength = 34,
-                                messageFontSize = "13px", messageMaxLength = 400,
-                                buttonsFontSize = "14px", buttonsMaxLength = 34,
-                                okButtonColor = "#f8f8f8", okButtonBackground = "#00b462",
-                                cancelButtonColor = "#f8f8f8", cancelButtonBackground = "#a9a9a9",
-                                cssAnimation = TRUE, cssAnimationDuration = 360,
+                                titleFontSize = "16px", titleColor = "#00b462",
+                                titleMaxLength = 34, messageFontSize = "13px", 
+                                messageMaxLength = 400, buttonsFontSize = "14px",
+                                buttonsMaxLength = 34,okButtonColor = "#f8f8f8", 
+                                okButtonBackground = "#00b462", cancelButtonColor = "#f8f8f8", 
+                                cancelButtonBackground = "#a9a9a9", cssAnimation = TRUE, 
+                                cssAnimationDuration = 360,
                                 cssAnimationStyle = c("fade", "zoom"),
                                 plainText = FALSE, width = "280px") {
   cssAnimationStyle <- match.arg(cssAnimationStyle)
@@ -209,6 +211,7 @@ use_notiflix_confirm <- function(backgroundColor = "#f8f8f8", borderRadius = "25
           backOverlayColor = backOverlayColor,
           titleFontSize = titleFontSize,
           titleMaxLength = titleMaxLength,
+          titleColor = titleColor,
           messageFontSize = messageFontSize,
           messageMaxLength = messageMaxLength,
           buttonsFontSize = buttonsFontSize,

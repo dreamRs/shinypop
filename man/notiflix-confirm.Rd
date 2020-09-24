@@ -6,20 +6,37 @@
 \alias{use_notiflix_confirm}
 \title{Confirm dialog with notiflix.js}
 \usage{
-nx_confirm(inputId, title, message = NULL, button_ok = "Ok",
+nx_confirm(
+  inputId,
+  title,
+  message = NULL,
+  button_ok = "Ok",
   button_cancel = "Cancel",
-  session = shiny::getDefaultReactiveDomain())
+  session = shiny::getDefaultReactiveDomain()
+)
 
-use_notiflix_confirm(backgroundColor = "#f8f8f8",
-  borderRadius = "25px", backOverlay = TRUE,
-  backOverlayColor = "rgba(0,0,0,0.5)", titleFontSize = "16px",
-  titleMaxLength = 34, messageFontSize = "13px",
-  messageMaxLength = 400, buttonsFontSize = "14px",
-  buttonsMaxLength = 34, okButtonColor = "#f8f8f8",
-  okButtonBackground = "#00b462", cancelButtonColor = "#f8f8f8",
-  cancelButtonBackground = "#a9a9a9", cssAnimation = TRUE,
-  cssAnimationDuration = 360, cssAnimationStyle = c("fade", "zoom"),
-  plainText = FALSE, width = "280px")
+use_notiflix_confirm(
+  backgroundColor = "#f8f8f8",
+  borderRadius = "25px",
+  backOverlay = TRUE,
+  backOverlayColor = "rgba(0,0,0,0.5)",
+  titleFontSize = "16px",
+  titleColor = "#00b462",
+  titleMaxLength = 34,
+  messageFontSize = "13px",
+  messageMaxLength = 400,
+  buttonsFontSize = "14px",
+  buttonsMaxLength = 34,
+  okButtonColor = "#f8f8f8",
+  okButtonBackground = "#00b462",
+  cancelButtonColor = "#f8f8f8",
+  cancelButtonBackground = "#a9a9a9",
+  cssAnimation = TRUE,
+  cssAnimationDuration = 360,
+  cssAnimationStyle = c("fade", "zoom"),
+  plainText = FALSE,
+  width = "280px"
+)
 }
 \arguments{
 \item{inputId}{The \code{input} slot that will be used to access the value.}
@@ -43,6 +60,8 @@ use_notiflix_confirm(backgroundColor = "#f8f8f8",
 \item{backOverlayColor}{Changes the color of the overlay. You can use HEX, RGB or RGBA.}
 
 \item{titleFontSize}{Changes the font-size of the title text.}
+
+\item{titleColor}{Changes the color of the title text.}
 
 \item{titleMaxLength}{Ignores characters of title text after the specified number.}
 
