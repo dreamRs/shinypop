@@ -1,9 +1,13 @@
 # shinypop
 
+> Collection of notifications and dialogs for Shiny applications
+
+<!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Travis build status](https://travis-ci.org/dreamRs/shinypop.svg?branch=master)](https://travis-ci.org/dreamRs/shinypop)
+<!-- badges: end -->
 
-> Collection of notifications and dialogs for Shiny applications
+
 
 ## Installation
 
@@ -21,6 +25,7 @@ Notifications libraries included :
   * notie : https://github.com/jaredreich/notie
   * push : https://github.com/Nickersoft/push.js
   * notiflix : https://github.com/notiflix/Notiflix
+
 
 ### noty
 

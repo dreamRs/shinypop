@@ -40,7 +40,9 @@
 #'   shinyApp(ui, server)
 #'
 #' }
-push <- function(title, text = NULL, timeout = 4000,
+push <- function(title, 
+                 text = NULL, 
+                 timeout = 4000,
                  session = shiny::getDefaultReactiveDomain()) {
   session$sendCustomMessage(
     type = "shinypop-push",

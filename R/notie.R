@@ -134,7 +134,10 @@ notie_close <- function(session = shiny::getDefaultReactiveDomain()) {
 #'   shinyApp(ui, server)
 #'
 #' }
-notie_confirm <- function(inputId, text, label_submit = "Ok", label_cancel = "Cancel",
+notie_confirm <- function(inputId, 
+                          text, 
+                          label_submit = "Ok", 
+                          label_cancel = "Cancel",
                           position = c("top", "bottom"),
                           session = shiny::getDefaultReactiveDomain()) {
   position <- match.arg(position)

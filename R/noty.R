@@ -105,8 +105,10 @@ noty <- function(text,
                             "bottom", "bottomLeft", "bottomCenter",
                             "bottomRight"),
                  theme = getOption("noty.theme", default = "sunset"),
-                 modal = FALSE, killer = FALSE,
-                 animation_open = NULL, animation_close = NULL,
+                 modal = FALSE, 
+                 killer = FALSE,
+                 animation_open = NULL,
+                 animation_close = NULL,
                  session = shiny::getDefaultReactiveDomain()) {
   type <- match.arg(type)
   layout <- match.arg(layout)

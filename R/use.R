@@ -66,7 +66,10 @@ use_push <- function() {
 #' @importFrom htmltools tags attachDependencies
 #' @importFrom jsonlite toJSON
 use_notiflix_notify <- function(position = c("right-top", "right-bottom", "left-top", "left-bottom"),
-                                timeout = 3000, closeButton = FALSE, messageMaxLength = 110, width = "280px") {
+                                timeout = 3000,
+                                closeButton = FALSE, 
+                                messageMaxLength = 110,
+                                width = "280px") {
   position <- match.arg(position)
   attachDependencies(
     x = tags$div(
@@ -116,14 +119,21 @@ use_notiflix_notify <- function(position = c("right-top", "right-bottom", "left-
 #' @export
 #' @importFrom htmltools tags attachDependencies
 #' @importFrom jsonlite toJSON
-use_notiflix_report <- function(backgroundColor = "#f8f8f8", borderRadius = "25px",
-                                backOverlay = TRUE, backOverlayColor = "rgba(0,0,0,0.5)",
-                                titleFontSize = "16px", titleMaxLength = 34,
-                                messageFontSize = "13px", messageMaxLength = 400,
-                                buttonFontSize = "14px", buttonMaxLength = 34,
-                                cssAnimation = TRUE, cssAnimationDuration = 360,
+use_notiflix_report <- function(backgroundColor = "#f8f8f8", 
+                                borderRadius = "25px",
+                                backOverlay = TRUE,
+                                backOverlayColor = "rgba(0,0,0,0.5)",
+                                titleFontSize = "16px",
+                                titleMaxLength = 34,
+                                messageFontSize = "13px",
+                                messageMaxLength = 400,
+                                buttonFontSize = "14px", 
+                                buttonMaxLength = 34,
+                                cssAnimation = TRUE, 
+                                cssAnimationDuration = 360,
                                 cssAnimationStyle = c("fade", "zoom"),
-                                plainText = FALSE, width = "280px") {
+                                plainText = FALSE, 
+                                width = "280px") {
   cssAnimationStyle <- match.arg(cssAnimationStyle)
   attachDependencies(
     x = tags$div(
@@ -185,17 +195,26 @@ use_notiflix_report <- function(backgroundColor = "#f8f8f8", borderRadius = "25p
 #' @export
 #' @importFrom htmltools tags attachDependencies
 #' @importFrom jsonlite toJSON
-use_notiflix_confirm <- function(backgroundColor = "#f8f8f8", borderRadius = "25px",
-                                backOverlay = TRUE, backOverlayColor = "rgba(0,0,0,0.5)",
-                                titleFontSize = "16px", titleColor = "#00b462",
-                                titleMaxLength = 34, messageFontSize = "13px", 
-                                messageMaxLength = 400, buttonsFontSize = "14px",
-                                buttonsMaxLength = 34,okButtonColor = "#f8f8f8", 
-                                okButtonBackground = "#00b462", cancelButtonColor = "#f8f8f8", 
-                                cancelButtonBackground = "#a9a9a9", cssAnimation = TRUE, 
-                                cssAnimationDuration = 360,
-                                cssAnimationStyle = c("fade", "zoom"),
-                                plainText = FALSE, width = "280px") {
+use_notiflix_confirm <- function(backgroundColor = "#f8f8f8",
+                                 borderRadius = "25px",
+                                 backOverlay = TRUE, 
+                                 backOverlayColor = "rgba(0,0,0,0.5)",
+                                 titleFontSize = "16px", 
+                                 titleColor = "#00b462",
+                                 titleMaxLength = 34, 
+                                 messageFontSize = "13px", 
+                                 messageMaxLength = 400, 
+                                 buttonsFontSize = "14px",
+                                 buttonsMaxLength = 34,
+                                 okButtonColor = "#f8f8f8", 
+                                 okButtonBackground = "#00b462",
+                                 cancelButtonColor = "#f8f8f8", 
+                                 cancelButtonBackground = "#a9a9a9",
+                                 cssAnimation = TRUE, 
+                                 cssAnimationDuration = 360,
+                                 cssAnimationStyle = c("fade", "zoom"),
+                                 plainText = FALSE, 
+                                 width = "280px") {
   cssAnimationStyle <- match.arg(cssAnimationStyle)
   attachDependencies(
     x = tags$div(

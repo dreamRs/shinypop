@@ -158,7 +158,9 @@ nx_notify <- function(session, type, text, ...) {
 #'   shinyApp(ui, server)
 #'
 #' }
-nx_report_success <- function(title, message, button = "Ok",
+nx_report_success <- function(title,
+                              message,
+                              button = "Ok",
                               session = shiny::getDefaultReactiveDomain()) {
   nx_report(
     session, "success",
@@ -169,7 +171,9 @@ nx_report_success <- function(title, message, button = "Ok",
 #' @export
 #'
 #' @name notiflix-report
-nx_report_error <- function(title, message, button = "Ok",
+nx_report_error <- function(title,
+                            message, 
+                            button = "Ok",
                             session = shiny::getDefaultReactiveDomain()) {
   nx_report(
     session, "error",
@@ -180,7 +184,9 @@ nx_report_error <- function(title, message, button = "Ok",
 #' @export
 #'
 #' @name notiflix-report
-nx_report_info <- function(title, message, button = "Ok",
+nx_report_info <- function(title, 
+                           message, 
+                           button = "Ok",
                            session = shiny::getDefaultReactiveDomain()) {
   nx_report(
     session, "info",
@@ -191,7 +197,9 @@ nx_report_info <- function(title, message, button = "Ok",
 #' @export
 #'
 #' @name notiflix-report
-nx_report_warning <- function(title, message, button = "Ok",
+nx_report_warning <- function(title,
+                              message, 
+                              button = "Ok",
                               session = shiny::getDefaultReactiveDomain()) {
   nx_report(
     session, "warning",

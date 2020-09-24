@@ -52,7 +52,8 @@ favico <- function(value,
                    animation = c("pop", "slide", "fade", "popFade", "none"),
                    position = c("up", "down", "left", "upleft"),
                    type = c("circle", "rectangle"),
-                   bgColor = "#d00", textColor = "#fff", 
+                   bgColor = "#d00",
+                   textColor = "#fff", 
                    session = shiny::getDefaultReactiveDomain()) {
   animation <- match.arg(animation)
   position <- match.arg(position)
