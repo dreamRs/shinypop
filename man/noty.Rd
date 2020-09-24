@@ -6,13 +6,19 @@
 \alias{use_noty}
 \title{Notification with noty.js}
 \usage{
-noty(text, timeout = getOption("noty.timeout", default = 2000),
+noty(
+  text,
+  timeout = getOption("noty.timeout", default = 2000),
   type = c("info", "alert", "success", "error", "warning"),
-  layout = c("topRight", "top", "topLeft", "topCenter", "center",
-  "centerLeft", "centerRight", "bottom", "bottomLeft", "bottomCenter",
-  "bottomRight"), theme = getOption("noty.theme", default = "sunset"),
-  modal = FALSE, killer = FALSE, animation_open = NULL,
-  animation_close = NULL, session = shiny::getDefaultReactiveDomain())
+  layout = c("topRight", "top", "topLeft", "topCenter", "center", "centerLeft",
+    "centerRight", "bottom", "bottomLeft", "bottomCenter", "bottomRight"),
+  theme = getOption("noty.theme", default = "sunset"),
+  modal = FALSE,
+  killer = FALSE,
+  animation_open = NULL,
+  animation_close = NULL,
+  session = shiny::getDefaultReactiveDomain()
+)
 
 noty_close(session = shiny::getDefaultReactiveDomain())
 

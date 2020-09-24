@@ -17,9 +17,13 @@ nx_notify_info(text, session = shiny::getDefaultReactiveDomain())
 
 nx_notify_warning(text, session = shiny::getDefaultReactiveDomain())
 
-use_notiflix_notify(position = c("right-top", "right-bottom", "left-top",
-  "left-bottom"), timeout = 3000, closeButton = FALSE,
-  messageMaxLength = 110, width = "280px")
+use_notiflix_notify(
+  position = c("right-top", "right-bottom", "left-top", "left-bottom"),
+  timeout = 3000,
+  closeButton = FALSE,
+  messageMaxLength = 110,
+  width = "280px"
+)
 }
 \arguments{
 \item{text}{Text to display.}

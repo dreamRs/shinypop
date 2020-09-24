@@ -1,7 +1,7 @@
 Package: shinypop
 Title: Collection of Notifications for 'Shiny' Applications
-Version: 0.0.1.920
-Authors@R: c(person("Fanny", "Meyer", email = "fanny.meyer@dreamrs.fr", role = c("aut")),
+Version: 0.0.1.930
+Authors@R: c(person("Fanny", "Meyer", role = "aut"),
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
   person("Jared", "Reich", role = "cph", comment = "notie.js author"),
   person("Nedim", "Arabaci", role = "cph", comment = "noty.js author"),
@@ -20,6 +20,6 @@ Imports:
     shiny,
     htmltools,
     jsonlite
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Suggests: 
     testthat (>= 2.1.0)

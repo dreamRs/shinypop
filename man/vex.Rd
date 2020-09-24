@@ -6,17 +6,29 @@
 \alias{vex_confirm}
 \title{Alert and confirm with vex.js}
 \usage{
-use_vex(theme = c("default", "os", "plain", "top", "wireframe",
-  "bottom-right-corner", "flat-attack"))
+use_vex(
+  theme = c("default", "os", "plain", "top", "wireframe", "bottom-right-corner",
+    "flat-attack")
+)
 
-vex(content, showCloseButton = TRUE, escapeButtonCloses = TRUE,
+vex(
+  content,
+  showCloseButton = TRUE,
+  escapeButtonCloses = TRUE,
   overlayClosesOnClick = TRUE,
-  session = shiny::getDefaultReactiveDomain())
+  session = shiny::getDefaultReactiveDomain()
+)
 
-vex_confirm(inputId, content, yes_text = "Ok", no_text = "Cancel",
-  showCloseButton = FALSE, escapeButtonCloses = FALSE,
+vex_confirm(
+  inputId,
+  content,
+  yes_text = "Ok",
+  no_text = "Cancel",
+  showCloseButton = FALSE,
+  escapeButtonCloses = FALSE,
   overlayClosesOnClick = FALSE,
-  session = shiny::getDefaultReactiveDomain())
+  session = shiny::getDefaultReactiveDomain()
+)
 }
 \arguments{
 \item{theme}{Theme to use. Choose between \code{"default"}, \code{"os"},

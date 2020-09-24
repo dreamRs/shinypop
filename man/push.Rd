@@ -4,8 +4,12 @@
 \alias{push}
 \title{Notification with push.js}
 \usage{
-push(title, text = NULL, timeout = 4000,
-  session = shiny::getDefaultReactiveDomain())
+push(
+  title,
+  text = NULL,
+  timeout = 4000,
+  session = shiny::getDefaultReactiveDomain()
+)
 }
 \arguments{
 \item{title}{Title of the notification.}

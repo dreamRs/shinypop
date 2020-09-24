@@ -4,9 +4,14 @@
 \alias{notie_confirm}
 \title{Confirmation pop-up with notie.js}
 \usage{
-notie_confirm(inputId, text, label_submit = "Ok",
-  label_cancel = "Cancel", position = c("top", "bottom"),
-  session = shiny::getDefaultReactiveDomain())
+notie_confirm(
+  inputId,
+  text,
+  label_submit = "Ok",
+  label_cancel = "Cancel",
+  position = c("top", "bottom"),
+  session = shiny::getDefaultReactiveDomain()
+)
 }
 \arguments{
 \item{inputId}{The \code{input} slot that will be used to access the value.}

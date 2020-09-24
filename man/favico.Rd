@@ -5,10 +5,15 @@
 \alias{use_favico}
 \title{Notification with favico.js}
 \usage{
-favico(value, animation = c("pop", "slide", "fade", "popFade", "none"),
-  position = c("up", "down", "left", "upleft"), type = c("circle",
-  "rectangle"), bgColor = "#d00", textColor = "#fff",
-  session = shiny::getDefaultReactiveDomain())
+favico(
+  value,
+  animation = c("pop", "slide", "fade", "popFade", "none"),
+  position = c("up", "down", "left", "upleft"),
+  type = c("circle", "rectangle"),
+  bgColor = "#d00",
+  textColor = "#fff",
+  session = shiny::getDefaultReactiveDomain()
+)
 
 use_favico(img = NULL)
 }

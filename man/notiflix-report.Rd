@@ -9,25 +9,51 @@
 \alias{use_notiflix_report}
 \title{Report with notiflix.js}
 \usage{
-nx_report_success(title, message, button = "Ok",
-  session = shiny::getDefaultReactiveDomain())
+nx_report_success(
+  title,
+  message,
+  button = "Ok",
+  session = shiny::getDefaultReactiveDomain()
+)
 
-nx_report_error(title, message, button = "Ok",
-  session = shiny::getDefaultReactiveDomain())
+nx_report_error(
+  title,
+  message,
+  button = "Ok",
+  session = shiny::getDefaultReactiveDomain()
+)
 
-nx_report_info(title, message, button = "Ok",
-  session = shiny::getDefaultReactiveDomain())
+nx_report_info(
+  title,
+  message,
+  button = "Ok",
+  session = shiny::getDefaultReactiveDomain()
+)
 
-nx_report_warning(title, message, button = "Ok",
-  session = shiny::getDefaultReactiveDomain())
+nx_report_warning(
+  title,
+  message,
+  button = "Ok",
+  session = shiny::getDefaultReactiveDomain()
+)
 
-use_notiflix_report(backgroundColor = "#f8f8f8", borderRadius = "25px",
-  backOverlay = TRUE, backOverlayColor = "rgba(0,0,0,0.5)",
-  titleFontSize = "16px", titleMaxLength = 34,
-  messageFontSize = "13px", messageMaxLength = 400,
-  buttonFontSize = "14px", buttonMaxLength = 34, cssAnimation = TRUE,
-  cssAnimationDuration = 360, cssAnimationStyle = c("fade", "zoom"),
-  plainText = FALSE, width = "280px")
+use_notiflix_report(
+  backgroundColor = "#f8f8f8",
+  borderRadius = "25px",
+  backOverlay = TRUE,
+  backOverlayColor = "rgba(0,0,0,0.5)",
+  titleFontSize = "16px",
+  titleMaxLength = 34,
+  messageFontSize = "13px",
+  messageMaxLength = 400,
+  buttonFontSize = "14px",
+  buttonMaxLength = 34,
+  cssAnimation = TRUE,
+  cssAnimationDuration = 360,
+  cssAnimationStyle = c("fade", "zoom"),
+  plainText = FALSE,
+  width = "280px"
+)
 }
 \arguments{
 \item{title}{Title of the report.}

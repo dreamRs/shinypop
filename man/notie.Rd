@@ -7,10 +7,13 @@
 \alias{use_push}
 \title{Notification with notie.js}
 \usage{
-notie(text, time = getOption("notie.time", default = 3),
+notie(
+  text,
+  time = getOption("notie.time", default = 3),
   type = c("info", "neutral", "success", "error", "warning"),
   position = c("bottom", "top"),
-  session = shiny::getDefaultReactiveDomain())
+  session = shiny::getDefaultReactiveDomain()
+)
 
 notie_close(session = shiny::getDefaultReactiveDomain())
 
