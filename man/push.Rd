@@ -28,26 +28,24 @@ Initialize with \code{use_push} in UI before using \code{push} server-side.
 push.js sends desktop notifications, user need to allow permission to show notification.
 }
 \examples{
-if (interactive()) {
+library(shiny)
+library(shinypop)
 
-  library(shiny)
+ui <- fluidPage(
+  tags$h2("Push notification"),
+  use_push(),
+  actionButton("show", "Show notification"),
+  textInput("title", "Text to display", "Hello world :)")
+)
 
-  ui <- fluidPage(
-    tags$h2("Push notification"),
-    use_push(),
-    actionButton("show", "Show notification"),
-    textInput("title", "Text to display", "Hello world :)")
-  )
-
-  server <- function(input, output, session) {
-
-    observeEvent(input$show, {
-      push(title = input$title)
-    })
-
-  }
-
-  shinyApp(ui, server)
-
+server <- function(input, output, session) {
+  
+  observeEvent(input$show, {
+    push(title = input$title)
+  })
+  
 }
+
+if (interactive()) 
+  shinyApp(ui, server)
 }

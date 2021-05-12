@@ -14,50 +14,7 @@
 #'
 #' @name notie
 #'
-#' @examples
-#' if (interactive()) {
-#'
-#'   library(shiny)
-#'
-#'   ui <- fluidPage(
-#'     tags$h2("notie example"),
-#'     use_notie(),
-#'     splitLayout(
-#'       radioButtons(
-#'         inputId = "type",
-#'         label = "Type:",
-#'         choices = c("info", "neutral",
-#'                     "success", "error",
-#'                     "warning")
-#'       ),
-#'       radioButtons(
-#'         inputId = "position",
-#'         label = "Position:",
-#'         choices = c("bottom", "top")
-#'       )
-#'     ),
-#'     actionButton(
-#'       inputId = "show",
-#'       label = "Show notification",
-#'       width = "100%"
-#'     )
-#'   )
-#'
-#'   server <- function(input, output, session) {
-#'
-#'     observeEvent(input$show, {
-#'       notie(
-#'         text = "Hello world!",
-#'         type = input$type,
-#'         position = input$position
-#'       )
-#'     })
-#'
-#'   }
-#'
-#'   shinyApp(ui, server)
-#'
-#' }
+#' @example examples/notie.R
 notie <- function(text,
                   time = getOption("notie.time", default = 3),
                   type = c("info", "neutral", "success", "error", "warning"),

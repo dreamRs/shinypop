@@ -5,7 +5,7 @@
  * custom notifications in Shiny apps
  * https://github.com/dreamRs/shinypop
  *
- * @version 0.1.0
+ * @version 0.1.1
  */
  
  /*jshint
@@ -68,26 +68,26 @@ $(function() {
     } else {
       configNotify = {};
     }
-    Notiflix.Notify.Init(configNotify);
+    Notiflix.Notify.init(configNotify);
     Shiny.addCustomMessageHandler("shinypop-notiflix-notify-success", function(
       data
     ) {
-      Notiflix.Notify.Success(data.text);
+      Notiflix.Notify.success(data.text);
     });
     Shiny.addCustomMessageHandler("shinypop-notiflix-notify-error", function(
       data
     ) {
-      Notiflix.Notify.Failure(data.text);
+      Notiflix.Notify.failure(data.text);
     });
     Shiny.addCustomMessageHandler("shinypop-notiflix-notify-info", function(
       data
     ) {
-      Notiflix.Notify.Info(data.text);
+      Notiflix.Notify.info(data.text);
     });
     Shiny.addCustomMessageHandler("shinypop-notiflix-notify-warning", function(
       data
     ) {
-      Notiflix.Notify.Warning(data.text);
+      Notiflix.Notify.warning(data.text);
     });
 
     var configReport = document.querySelectorAll(
@@ -98,26 +98,26 @@ $(function() {
     } else {
       configReport = {};
     }
-    Notiflix.Report.Init(configReport);
+    Notiflix.Report.init(configReport);
     Shiny.addCustomMessageHandler("shinypop-notiflix-report-success", function(
       data
     ) {
-      Notiflix.Report.Success(data.title, data.message, data.button);
+      Notiflix.Report.success(data.title, data.message, data.button);
     });
     Shiny.addCustomMessageHandler("shinypop-notiflix-report-error", function(
       data
     ) {
-      Notiflix.Report.Failure(data.title, data.message, data.button);
+      Notiflix.Report.failure(data.title, data.message, data.button);
     });
     Shiny.addCustomMessageHandler("shinypop-notiflix-report-info", function(
       data
     ) {
-      Notiflix.Report.Info(data.title, data.message, data.button);
+      Notiflix.Report.info(data.title, data.message, data.button);
     });
     Shiny.addCustomMessageHandler("shinypop-notiflix-report-warning", function(
       data
     ) {
-      Notiflix.Report.Warning(data.title, data.message, data.button);
+      Notiflix.Report.warning(data.title, data.message, data.button);
     });
 
     var configConfirm = document.querySelectorAll(
@@ -128,10 +128,10 @@ $(function() {
     } else {
       configConfirm = {};
     }
-    Notiflix.Confirm.Init(configConfirm);
+    Notiflix.Confirm.init(configConfirm);
     Shiny.addCustomMessageHandler("shinypop-notiflix-confirm", function(data) {
       Shiny.setInputValue(data.id, null);
-      Notiflix.Confirm.Show(
+      Notiflix.Confirm.show(
         data.title,
         data.message,
         data.button_ok,

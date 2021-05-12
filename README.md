@@ -243,6 +243,7 @@ shinyApp(ui, server)
 For alerts you can use :
 
 * notiflix : https://github.com/notiflix/Notiflix
+* vex: https://github.com/hubspot/vex
 
 
 ### notiflix

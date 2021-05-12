@@ -1,14 +1,14 @@
 Package: shinypop
 Title: Collection of Notifications for 'Shiny' Applications
-Version: 0.0.1.930
+Version: 0.1.0
 Authors@R: c(person("Fanny", "Meyer", role = "aut"),
   person("Victor", "Perrier", email = "victor.perrier@dreamrs.fr", role = c("aut", "cre")),
-  person("Jared", "Reich", role = "cph", comment = "notie.js author"),
-  person("Nedim", "Arabaci", role = "cph", comment = "noty.js author"),
-  person("Tyler", "Nickerson", role = "cph", comment = "push.js author"),
-  person("Furkan", "MT", role = "cph", comment = "notiflix.js author"),
-  person("Miroslav", "Magda", role = "cph", comment = "favico.js author"),
-  person("HubSpot", role = "cph", comment = "vex.js author"))
+  person("Jared", "Reich", role = "cph", comment = "author of notie.js  JavaScript library"),
+  person("Nedim", "Arabaci", role = "cph", comment = "author of noty.js  JavaScript library"),
+  person("Tyler", "Nickerson", role = "cph", comment = "author of push.js  JavaScript library"),
+  person("Furkan", "MT", role = "cph", comment = "author of notiflix.js  JavaScript library"),
+  person("Miroslav", "Magda", role = "cph", comment = "author of favico.js  JavaScript library"),
+  person("HubSpot", role = "cph", comment = "author of vex.js  JavaScript library"))
 Description: Custom notifications, confirm dialogs and alerts for 'Shiny' applications.
 URL: https://github.com/dreamRs/shinypop
 BugReports: https://github.com/dreamRs/shinypop/issues

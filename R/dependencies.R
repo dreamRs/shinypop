@@ -3,7 +3,7 @@
 shinypop_dependencies <- function() {
   htmlDependency(
     name = "shinypop",
-    version = "0.1.0",
+    version = "0.1.1",
     src = list(href = "shinypop", file = "assets"),
     package = "shinypop",
     script = "js/shinypop-bindings.js"
@@ -15,7 +15,7 @@ shinypop_dependencies <- function() {
 noty_dependencies <- function() {
   htmlDependency(
     name = "noty",
-    version = "3.1.4",
+    version = "3.1.4", # JS lib DEPRECATED
     src = list(href = "shinypop", file = "assets"),
     package = "shinypop",
     script = "noty/noty.min.js",
@@ -62,11 +62,11 @@ push_dependencies <- function() {
 notiflix_dependencies <- function() {
   htmlDependency(
     name = "notiflix",
-    version = "1.7.1",
+    version = "3.0.1",
     src = list(href = "shinypop", file = "assets"),
     package = "shinypop",
-    script = "notiflix/notiflix-1.7.1.min.js",
-    stylesheet = "notiflix/notiflix-1.7.1.min.css"
+    script = "notiflix/notiflix-3.0.1.min.js",
+    stylesheet = "notiflix/notiflix-3.0.1.min.css"
   )
 }
 

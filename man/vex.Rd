@@ -57,34 +57,31 @@ Initialize with \code{use_vex} in UI before
  Retrieve value server-side with \code{input$<inputId>} for \code{vex_confirm}.
 }
 \examples{
+library(shiny)
+library(shinypop)
 
-### Alert ###
+ui <- fluidPage(
+  tags$h2("Alert with vex example"),
+  use_vex(),
+  actionButton("launch", "Launch an alert")
+)
 
-if (interactive()) {
-  library(shiny)
+server <- function(input, output, session) {
   
-  ui <- fluidPage(
-    tags$h2("Alert with vex example"),
-    use_vex(),
-    actionButton("launch", "Launch an alert")
-  )
+  observeEvent(input$launch, {
+    vex(tags$div(
+      style = "text-align: center;",
+      tags$h3("Attention"),
+      tags$br(),
+      tags$p("This alert was sent from the server,"),
+      tags$p("probably something went", tags$b("wrong"))
+    ))
+  })
   
-  server <- function(input, output, session) {
-    
-    observeEvent(input$launch, {
-      vex(tags$div(
-        style = "text-align: center;",
-        tags$h3("Attention"),
-        tags$br(),
-        tags$p("This alert was sent from the server,"),
-        tags$p("probably something went", tags$b("wrong"))
-      ))
-    })
-    
-  }
-  
-  shinyApp(ui, server)
 }
+
+if (interactive()) 
+  shinyApp(ui, server)
 
 
 ### Confirm ####' 

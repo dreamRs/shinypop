@@ -17,35 +17,7 @@
 #' 
 #' @name vex
 #'
-#' @examples
-#' 
-#' ### Alert ###
-#' 
-#' if (interactive()) {
-#'   library(shiny)
-#'   
-#'   ui <- fluidPage(
-#'     tags$h2("Alert with vex example"),
-#'     use_vex(),
-#'     actionButton("launch", "Launch an alert")
-#'   )
-#'   
-#'   server <- function(input, output, session) {
-#'     
-#'     observeEvent(input$launch, {
-#'       vex(tags$div(
-#'         style = "text-align: center;",
-#'         tags$h3("Attention"),
-#'         tags$br(),
-#'         tags$p("This alert was sent from the server,"),
-#'         tags$p("probably something went", tags$b("wrong"))
-#'       ))
-#'     })
-#'     
-#'   }
-#'   
-#'   shinyApp(ui, server)
-#' }
+#' @example examples/vex.R
 vex <- function(content, 
                 showCloseButton = TRUE, 
                 escapeButtonCloses = TRUE, 
