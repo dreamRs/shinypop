@@ -7,6 +7,8 @@
 #'
 #' @param content Text to display in the alert.
 #' @param showCloseButton Show or not a button to close alert.
+#' @param showButton Show or not a button ath the bottom of the alert.
+#' @param labelButton Label for the button.
 #' @param escapeButtonCloses Close alert when pressing escape button.
 #' @param overlayClosesOnClick Close alert when clicking outside alert.
 #' @param session Shiny session.
@@ -20,17 +22,22 @@
 #' @example examples/vex.R
 vex <- function(content, 
                 showCloseButton = TRUE, 
+                showButton = TRUE,
+                labelButton = "OK",
                 escapeButtonCloses = TRUE, 
                 overlayClosesOnClick = TRUE,
                 session = shiny::getDefaultReactiveDomain()) {
+  config <- dropNulls(list(
+    unsafeMessage = doRenderTags(content),
+    showCloseButton = showCloseButton,
+    escapeButtonCloses = escapeButtonCloses,
+    overlayClosesOnClick = overlayClosesOnClick
+  ))
+  if (!isTRUE(showButton))
+    config$buttons <- list()
   session$sendCustomMessage(
     type = "shinypop-vex-alert",
-    message = dropNulls(list(
-      unsafeMessage = doRenderTags(content),
-      showCloseButton = showCloseButton,
-      escapeButtonCloses = escapeButtonCloses,
-      overlayClosesOnClick = overlayClosesOnClick
-    ))
+    message = list(config = config, labelButton = labelButton)
   )
 }
 
@@ -107,5 +114,12 @@ vex_confirm <- function(inputId,
   )
 }
 
-
-
+#' @export
+#' 
+#' @rdname vex
+vex_close <- function(session = shiny::getDefaultReactiveDomain()) {
+  session$sendCustomMessage(
+    type = "shinypop-vex-close",
+    message = list()
+  )
+}

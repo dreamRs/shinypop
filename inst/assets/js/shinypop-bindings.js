@@ -161,7 +161,8 @@ $(function() {
     }
   }
   Shiny.addCustomMessageHandler("shinypop-vex-alert", function(data) {
-    vex.dialog.alert(data);
+    vex.dialog.buttons.YES.text = data.labelButton;
+    vex.dialog.alert(data.config);
   });
 
   Shiny.addCustomMessageHandler("shinypop-vex-confirm", function(data) {
@@ -176,6 +177,10 @@ $(function() {
       }
     };
     vex.dialog.confirm(data.config);
+  });
+  
+  Shiny.addCustomMessageHandler("shinypop-vex-close", function(data) {
+    vex.closeAll();
   });
 });
 

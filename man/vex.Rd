@@ -4,6 +4,7 @@
 \alias{use_vex}
 \alias{vex}
 \alias{vex_confirm}
+\alias{vex_close}
 \title{Alert and confirm with vex.js}
 \usage{
 use_vex(
@@ -14,6 +15,8 @@ use_vex(
 vex(
   content,
   showCloseButton = TRUE,
+  showButton = TRUE,
+  labelButton = "OK",
   escapeButtonCloses = TRUE,
   overlayClosesOnClick = TRUE,
   session = shiny::getDefaultReactiveDomain()
@@ -29,6 +32,8 @@ vex_confirm(
   overlayClosesOnClick = FALSE,
   session = shiny::getDefaultReactiveDomain()
 )
+
+vex_close(session = shiny::getDefaultReactiveDomain())
 }
 \arguments{
 \item{theme}{Theme to use. Choose between \code{"default"}, \code{"os"},
@@ -38,6 +43,10 @@ vex_confirm(
 \item{content}{Text to display in the alert.}
 
 \item{showCloseButton}{Show or not a button to close alert.}
+
+\item{showButton}{Show or not a button ath the bottom of the alert.}
+
+\item{labelButton}{Label for the button.}
 
 \item{escapeButtonCloses}{Close alert when pressing escape button.}
 
