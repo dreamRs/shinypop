@@ -4,7 +4,6 @@
 
 <!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Travis build status](https://travis-ci.org/dreamRs/shinypop.svg?branch=master)](https://travis-ci.org/dreamRs/shinypop)
 [![R build status](https://github.com/dreamRs/shinypop/workflows/R-CMD-check/badge.svg)](https://github.com/dreamRs/shinypop/actions)
 <!-- badges: end -->
 
@@ -26,6 +25,7 @@ Notifications libraries included :
   * notie : https://github.com/jaredreich/notie
   * push : https://github.com/Nickersoft/push.js
   * notiflix : https://github.com/notiflix/Notiflix
+  * vex : https://github.hubspot.com/vex/docs/welcome/
 
 
 ### noty
